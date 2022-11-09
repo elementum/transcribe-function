@@ -1,0 +1,76 @@
+{
+	"info": {
+		"_postman_id": "fbdc8817-2f55-4729-beac-92f36fe07678",
+		"name": "Google functions",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20687536"
+	},
+	"item": [
+		{
+			"name": "Transcriptions",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"type": "file",
+							"src": "/C:/Users/bodro/Desktop/201906-90000000000000000000000000000000.mp3"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://function-1-ppnvy42hca-uc.a.run.app/transcriptions",
+					"protocol": "https",
+					"host": [
+						"function-1-ppnvy42hca-uc",
+						"a",
+						"run",
+						"app"
+					],
+					"path": [
+						"transcriptions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transcriptions/:id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://function-1-ppnvy42hca-uc.a.run.app/transcriptions/:id",
+					"protocol": "https",
+					"host": [
+						"function-1-ppnvy42hca-uc",
+						"a",
+						"run",
+						"app"
+					],
+					"path": [
+						"transcriptions",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
