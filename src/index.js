@@ -11,7 +11,14 @@ app.post('/transcriptions', async (req, res) => {
         return res.send('File is empty').status(400)
     }
 
-    const transcription = await transcribe(file)
+    let transcription = null
+
+    try {
+        transcription = await transcribe(file)
+    } catch (err) {
+        return res.send('Unable to transcribe file').status(500)
+    }
+
     const id = await db.add(transcription)
     res.send({ transcription, id })
 })
